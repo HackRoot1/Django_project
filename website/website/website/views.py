@@ -1,11 +1,21 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
+from my_model.models import MyModel
 
 def home(request):
-    return render(request, "index.html")
+    formData = MyModel.objects.all()
+    data = {
+        'formData': formData
+    }
+    return render(request, "index.html", data)
 
-def subject1(request):
-    return render(request, "subject1.html")
+def subject1(request, sem):
+    formData = MyModel.objects.filter(semester=sem).values()
+    # formData = MyModel.objects.all[semester==sem]
+    data = {
+        'formData': formData
+    }
+    return render(request, "subject1.html", data)
 def subject2(request):
     return render(request, "subject2.html")
 def subject3(request):
