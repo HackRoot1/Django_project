@@ -24,5 +24,5 @@ urlpatterns = [
     path('subject1/<sem>', views.subject1, name = "subject1"),
     path('subject2/', views.subject2, name = "subject2"),
     path('subject3/', views.subject3, name = "subject3"),
-    path('subject4/', views.subject4, name = "subject4"),
+    path('login/', views.login, name = "login"),
 ]

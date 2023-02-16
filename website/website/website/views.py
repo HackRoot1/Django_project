@@ -20,8 +20,8 @@ def subject2(request):
     return render(request, "subject2.html")
 def subject3(request):
     return render(request, "subject3.html")
-def subject4(request):
-    return render(request, "subject4.html")
+def login(request):
+    return render(request, "login.html")
 
 def units(request):
     return render(request, "units.html")

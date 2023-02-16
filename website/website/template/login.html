@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+    {% block content %}
+
+        <!-- body -->
+        <main>  
+            <form class = "forms-info" method="POST" action = "">
+                <div class="con">
+                    <header class="head-form">
+                        <h2>Log In</h2>
+                        <p> login here using your username and password</p>
+                    </header>
+
+                    <br>
+
+                    <div class="field-set">
+                        <table>
+                            <tr>
+                                <td> <input class="form-control form-input" id="txt-input" type="text" placeholder="@UserName" name="username" required></td>
+                            </tr>
+                            <tr>
+                                <td> <input class="form-control form-input" type="password" placeholder="Password" id="pwd" name="password" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> <button class="log-in">Log In</button></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="other">
+
+                        <button class="btn submits frgt-pass">Forget Password</button>
+                        <button class="btn submits sign-up">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+            
+        </main>
+    {% endblock %}
