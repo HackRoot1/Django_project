@@ -2,18 +2,37 @@
 
     {% block content %}
         
-        <main class = "container mt-5 bg-light shadow-lg">
-            <section class = "bg-info text-center">
+        <main class = "mt-5 bg-light shadow-lg">
+            <section class = "container bg-info text-center">
                 <h1>Welcome to Study Material Portal</h1>
             </section>
-            <section class = "bg-light">
+
+            <!-- Content here -->
+            <section class="container text-light h-50 p-0"
+                style="background-color: #82AAE3;box-shadow: 0 9px 50px hsla(20, 47%, 85%, 1);border: 1px ridge rgb(219, 219, 219) ;">
+                <div class="text-black p-5">
+                    <h1 class="d-flex justify-content-center">About us </h1>
+                    <div class="d-flex justify-content-center" style="font-size: 25px; font-weight: 700;">Study Material
+                        Website</div>
+                    <p class="d-flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia, provident id
+                        voluptatibus ab tenetur autem quia excepturi expedita accusamus dolores laboriosam vel ipsum
+                        voluptatem aliquid, quod magni. Possimus, aliquam.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora voluptatibus libero beatae dolore!
+                        Adipisci ipsam cupiditate excepturi reiciendis ut eum doloribus corrupti dignissimos? Natus rerum
+                        ratione debitis commodi? Ex, laboriosam.
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- <section class = "container bg-light">
                 <div class = "text-center" style = "font-size: 30px;">
                     Subjects
                 </div>
                 <div style = "min-height: 300px">
 
-                    <!-- By logic -->
-                    
+                    By logic -->
+<!--                     
                     <ol>
                         {% for i in formData %}
                             <li>
@@ -22,7 +41,7 @@
                                 </a>
                             </li>
                         {% endfor %}
-                    </ol>
+                    </ol> -->
 
                     <!-- static -->
                     <!-- <ol>
@@ -30,10 +49,48 @@
                         <li><a href="https://drive.google.com/file/d/1DNIjXE7D-VmChTuEP0oKHTNrERzw8lbA/view?usp=sharing">Data Science</a></li>
                         <li><a href="https://drive.google.com/file/d/18MAHrz6N6bXS9AE2oJEXWTXTi2PMtxUY/view?usp=sharing">Research in Computing</a></li>
                         <li><a href="https://drive.google.com/file/d/197HDJGeVEKgmWc3DK5QKYdIshsVUFCsE/view?usp=sharing">Soft Computing Techniques</a></li>
-                    </ol> -->
+                   </ol> 
+                </div>
+            </section> -->
+
+            <!-- Content here -->
+            <section class="container text-light h-50 p-0 mt-5"
+                style="background-color: #82AAE3;box-shadow: 0 9px 50px hsla(20, 47%, 85%, 1);border: 1px ridge rgb(219, 219, 219) ;">
+                <div class="text-black p-5">
+                    <div class="d-flex justify-content-center" style="font-size: 25px; font-weight: 700;">Subjects</div>
+                    <div class = "d-flex">
+                        <ol>
+                            {% for i in formData %}
+                                <li>
+                                    <a href = "{{i.subject_link}}" style = "text-decoration: none; color:hsla(20, 47%, 85%, 1)">
+                                        {{i.subjects}}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                    
                 </div>
             </section>
-            <section class = "bg-light">
+            
+            <!-- Content here -->
+            <section class="container text-light h-50 p-0 mt-5"
+                style="background-color: #82AAE3;box-shadow: 0 9px 50px hsla(20, 47%, 85%, 1);border: 1px ridge rgb(219, 219, 219) ;">
+                <div class="text-black p-5">
+                    <div class="d-flex justify-content-center" style="font-size: 25px; font-weight: 700;">Practicals</div>
+                    <div class = "d-flex">
+                        <ol>
+                            <li><a href="" style = "text-decoration: none;  color:hsla(20, 47%, 85%, 1)">Cloud Computing Practicals</a></li>
+                            <li><a href="" style = "text-decoration: none;  color:hsla(20, 47%, 85%, 1)">Data Science Practicals</a></li>
+                            <li><a href="" style = "text-decoration: none;  color:hsla(20, 47%, 85%, 1)">Research in Computing Practicals</a></li>
+                            <li><a href="" style = "text-decoration: none;  color:hsla(20, 47%, 85%, 1)">Soft Computing Techniques Practicals</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- <section class = "bg-light">
                 <div class = "text-center" style = "font-size: 30px;">
                     Practicals
                 </div>
@@ -45,7 +102,7 @@
                         <li><a href="">Soft Computing Techniques Practicals</a></li>
                     </ol>
                 </div>
-            </section>
+            </section> -->
         </main>
         
     {% endblock %}

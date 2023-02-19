@@ -19,6 +19,9 @@ from website import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = "home"),
+    path('msc-it/', views.mscit, name = "mscit"),
+    path('bsc-it/', views.bscit, name = "bscit"),
+    path('sign-up/', views.signup, name = "signup"),
     path('units/', views.units, name = "units"),
     path('reference_books/', views.reference_books, name = "reference_books"),
     path('subject1/<sem>', views.subject1, name = "subject1"),

@@ -5,6 +5,7 @@
         <!-- body -->
         <main>  
             <form class = "forms-info" method="POST" action = "">
+                {% csrf_token %}
                 <div class="con">
                     <header class="head-form">
                         <h2>Log In</h2>
@@ -23,15 +24,15 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td> <button class="log-in">Log In</button></td>
+                                <td> <button class="button1 log-in">Log In</button></td>
                             </tr>
                         </table>
                     </div>
 
                     <div class="other">
 
-                        <button class="btn submits frgt-pass">Forget Password</button>
-                        <button class="btn submits sign-up">Sign Up</button>
+                        <button class="btn button1 submits frgt-pass">Forget Password</button>
+                        <button class="btn button1 submits sign-up">Sign Up</button>
                     </div>
                 </div>
             </form>

@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
-from my_model.models import MyModel
+from my_model.models import MyModel, classData, semData
 
 def home(request):
     formData = MyModel.objects.all()
@@ -8,6 +8,20 @@ def home(request):
         'formData': formData
     }
     return render(request, "index.html", data)
+
+def mscit(request):
+    formData = MyModel.objects.all()
+    data = {
+        'formData': formData
+    }
+    return render(request, "mscit.html", data)
+
+def bscit(request):
+    formData = MyModel.objects.all()
+    data = {
+        'formData': formData
+    }
+    return render(request, "bscit.html", data)
 
 def subject1(request, sem):
     formData = MyModel.objects.filter(semester=sem).values()
@@ -19,9 +33,17 @@ def subject1(request, sem):
 def subject2(request):
     return render(request, "subject2.html")
 def subject3(request):
-    return render(request, "subject3.html")
+    formData = classData.objects.all()
+    data = {
+        'formData': formData
+    }
+    return render(request, "subject3.html", data)
+
 def login(request):
     return render(request, "login.html")
+
+def signup(request):
+    return render(request, "signup.html")
 
 def units(request):
     return render(request, "units.html")

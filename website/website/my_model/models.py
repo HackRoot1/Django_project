@@ -7,3 +7,10 @@ class MyModel(models.Model):
     semester = models.CharField(max_length=50, null = True)
     subjects = models.CharField(max_length=50)
     subject_link = models.CharField(max_length=100, null=True)
+
+class classData(models.Model):
+    classes = models.CharField(max_length=100)
+    
+class semData(models.Model):
+    sem = models.CharField(max_length=100)
+    

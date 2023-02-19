@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+    {% block content %}
+        
+        <main class = "container mt-5">
+            <section class = " text-center">
+                <h1>Welcome to Study Material Portal</h1>
+            </section>
+
+            <!-- Content here -->
+            <div class="container text-light h-50 p-0"
+                style="background-color: #82AAE3;box-shadow: 0 9px 50px hsla(20, 47%, 85%, 1);border: 1px ridge rgb(219, 219, 219) ;">
+                <div class="text-black p-5">
+                    <h1 class="d-flex justify-content-center">About us </h1>
+                    <div class="d-flex justify-content-center" style="font-size: 25px; font-weight: 700;">Study Material
+                        Website</div>
+                    <p class="d-flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officia, provident id
+                        voluptatibus ab tenetur autem quia excepturi expedita accusamus dolores laboriosam vel ipsum
+                        voluptatem aliquid, quod magni. Possimus, aliquam.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora voluptatibus libero beatae dolore!
+                        Adipisci ipsam cupiditate excepturi reiciendis ut eum doloribus corrupti dignissimos? Natus rerum
+                        ratione debitis commodi? Ex, laboriosam.
+                    </p>
+                </div>
+            </div>
+
+            <section class = "mt-5 container">
+                <div class = "text-center h-50" style = "font-size: 30px;">
+                    BSc.I.T.
+                </div>
+                <!-- <div style = "height: 500px">
+                    <ol>
+                        {% for i in formData %}
+                                <li><a href = "/subject1/{{i.semester}}">{{i.classes}} {{i.class_name}} {{i.semester}}</a></li>
+                        {% endfor %}
+                    </ol>
+                </div> -->
+
+
+                <div class="row p-0">
+                    {% for i in formData %}
+                        {% if i.classes == 'BSc.I.T.' %}
+                        <div class="col-3 p-4 hov" style="height: 300px;">
+                            <a  href = "/subject1/{{i.semester}}">
+                                {{i.classes}} {{i.class_name}} {{i.semester}}
+                            </a>
+                        </div>
+                        {% endif %}
+                    <!-- <div class="col-3 p-4 hov" style="height: 300px;">
+                        MSc
+                    </div> -->
+                    {% endfor %}
+                </div>
+                <!-- <div class="row p-0">
+                    <div class="col-3 p-4 hov" style="height: 300px;">
+                        BSc
+                    </div>
+                    <div class="col-3 p-4 hov" style="height: 300px;">
+                        MSc
+                    </div>
+                </div> -->
+            </section>
+        </main>
+    {% endblock %}
